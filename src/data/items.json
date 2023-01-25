@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Git",
+      "price": 70,
+      "imgUrl": "/images/git.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Computer",
+      "price": 11000,
+      "imgUrl": "/images/computer.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Javascript",
+      "price": 119.99,
+      "imgUrl": "/images/Javascript.png"
+    },
+    {
+      "id": 4,
+      "name": "MongoDb",
+      "price": 100,
+      "imgUrl": "/images/mongodb.png"
+    },
+    {
+        "id": 5,
+        "name": "NodeJs",
+        "price": 140,
+        "imgUrl": "/images/nodejs.png"
+      },
+      {
+        "id": 6,
+        "name": "Python",
+        "price": 210.00 ,
+        "imgUrl": "/images/python.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Redux",
+        "price": 50,
+        "imgUrl": "/images/redux.png"
+      },
+      {
+        "id": 8,
+        "name": "Typescript",
+        "price": 250,
+        "imgUrl": "/images/typeScript.png"
+      }
+  ]
