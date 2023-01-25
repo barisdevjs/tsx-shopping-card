@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 
-export function useLocalStorage<T>(key: string, initialValue: T | (() => T)){
+export function useSessionStorage<T>(key: string, initialValue: T | (() => T)){
     const [ value , setValue] = useState<T>(() => {
-        const jsonValue = localStorage.getItem(key)
+        const jsonValue = sessionStorage.getItem(key)
         if ( jsonValue !== null ) return JSON.parse( jsonValue )
 
         if ( typeof initialValue === 'function' ) {
@@ -13,7 +13,7 @@ export function useLocalStorage<T>(key: string, initialValue: T | (() => T)){
     })
 
     useEffect(() => {
-        localStorage.setItem(key, JSON.stringify(value))
+        sessionStorage.setItem(key, JSON.stringify(value))
     }, [key,value])
 
     return [ value, setValue ] as [ typeof value , typeof setValue ]
