@@ -1,0 +1,10 @@
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: var(--bs-red) !important;
+    /* box-shadow: 0em .04em var(--bs-red); */
+    font-weight: 500;
+    transition: .1s ease-out all;
+}
+
+.offcanvas.offcanvas-end.show {
+    width: 500px;
+}

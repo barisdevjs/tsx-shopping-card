@@ -1,6 +1,8 @@
 import { Card, Button } from 'react-bootstrap'
 import { useShoppingCart } from '../context/ShoppingCartContext'
 import { formatCurrency } from '../utilities/formatCurrency'
+import { Link } from 'react-router-dom'
+
 
 type StoreItemsProps = {
     id: number
@@ -10,7 +12,7 @@ type StoreItemsProps = {
 }
 
 export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) {
-
+ 
     const {
         getItemQuantity,
         increaseItemQuantity,
@@ -18,15 +20,18 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
         removeFromCart
     } = useShoppingCart()
 
+
     const quantity = getItemQuantity(id)
     return (
         <Card className='h-100' >
+            <Link to={`/store/${name}`} >
             <Card.Img
                 variant='top'
                 src={imgUrl}
                 height='200px'
                 style={{ objectFit: 'cover' }}
             />
+            </Link>
             <Card.Body className='d-flex flex-column'>
                 <Card.Title className='d-flex justify-content-between align-items-baseline mb-4'>
                     <span className='fs-4'>{name}</span>
@@ -43,11 +48,11 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
                             <div className='d-flex align-items-center justify-content-center'
                                 style={{ gap: '.5rem' }}
                             >
-                                <Button onClick={() => decreaseItemQuantity(id)}>-</Button>
+                                <Button variant='outline-secondary' onClick={() => decreaseItemQuantity(id)}>-</Button>
                                 <div>
                                     <span className='fs-5'>{quantity}</span> in cart
                                 </div>
-                                <Button onClick={() => increaseItemQuantity(id)}>+</Button>
+                                <Button variant='outline-secondary' onClick={() => increaseItemQuantity(id)}>+</Button>
                             </div>
                             <Button 
                             onClick={() => removeFromCart(id)}

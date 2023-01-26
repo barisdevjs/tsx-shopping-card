@@ -14,7 +14,7 @@ export  function ShoppingCart({isOpen} : ShopingCartProps) {
     const { closeCart, cartItems} = useShoppingCart();
 
   return (
-    <Offcanvas show={isOpen} onHide={closeCart} keyboard={true} placement="end">
+    <Offcanvas show={isOpen} onHide={closeCart} keyboard={true} placement="end" width={700}>
         <Offcanvas.Header closeButton>
             <Offcanvas.Title>
                  Cart
