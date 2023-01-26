@@ -4,7 +4,7 @@ import { formatCurrency } from '../utilities/formatCurrency'
 import { Link } from 'react-router-dom'
 
 
-type StoreItemsProps = {
+export type StoreItemsProps = {
     id: number
     name: string
     price: number
@@ -24,13 +24,14 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
     const quantity = getItemQuantity(id)
     return (
         <Card className='h-100' >
-            <Link to={`/store/${name}`} >
+            <Link to={`/store/${name}`}   >
             <Card.Img
                 variant='top'
                 src={imgUrl}
                 height='200px'
                 style={{ objectFit: 'cover' }}
             />
+            {/* <Item name={name} price={price} imgUrl={imgUrl} id={id}/> */}
             </Link>
             <Card.Body className='d-flex flex-column'>
                 <Card.Title className='d-flex justify-content-between align-items-baseline mb-4'>

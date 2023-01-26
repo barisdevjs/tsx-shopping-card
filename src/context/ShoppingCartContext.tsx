@@ -1,6 +1,10 @@
 import { createContext, useContext, ReactNode, useState } from 'react'
 import { ShoppingCart } from '../components/ShoppingCart'
 import { useSessionStorage } from '../hooks/useSessionStorage'
+import { StoreItemsProps } from '../components/StoreItem' 
+import storeItems from '../data/items.json'
+
+
 
 
 type ShoppingCartProviderProps = {
@@ -19,6 +23,7 @@ type ShoppingCartContext = {
     increaseItemQuantity: (id: number) => void
     decreaseItemQuantity: (id: number) => void
     removeFromCart: (id: number) => void
+    getItem:(name: string) => StoreItemsProps
     cartQuantity : number
     cartItems: CartItemT[]
 }
@@ -42,6 +47,10 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
     function closeCart() {
         setIsOpen(false)
+    }
+
+    function getItem(name: string)  {
+        return  storeItems.find(e => e.name === name)!
     }
 
 
@@ -98,7 +107,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             openCart,
             closeCart,
             cartItems,
-            cartQuantity
+            cartQuantity,
+            getItem
             }}>
             {children}
             <ShoppingCart isOpen={isOpen} />
