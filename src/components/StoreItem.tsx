@@ -8,7 +8,8 @@ export type StoreItemsProps = {
     id: number
     name: string
     price: number
-    imgUrl: string 
+    imgUrl: string
+    description?:string 
 }
 
 export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) {
