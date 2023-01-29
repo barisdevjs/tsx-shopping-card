@@ -8,3 +8,10 @@
 .offcanvas.offcanvas-end.show {
     width: 500px;
 }
+
+.btn-out {
+    display:flex !important;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1rem;
+}
