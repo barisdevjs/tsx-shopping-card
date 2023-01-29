@@ -12,9 +12,8 @@ function Item() {
   const navigate =useNavigate()
 
   return (
-    <div className="d-grid justify-items-center align-content-center" style={{height:'85dvh', justifyItems:'center'}} >
-      <Card style={{width:'clamp(50%,70%,80%)'}}>
-        <Card.Img variant="top" src={element.imgUrl} style={{ height: '50vh', objectFit:'cover' }}/>
+      <Card>
+        <Card.Img variant="top" src={element.imgUrl} style={{ maxHeight: '49vh', objectFit:'cover' }}/>
         <Card.Body>
           <Card.Title className="d-flex justify-content-between mb-0">
             <p>{element.name}</p>
@@ -28,7 +27,6 @@ function Item() {
           </Card.Text>
         </Card.Body>
       </Card>
-    </div>
   )
 }
 
