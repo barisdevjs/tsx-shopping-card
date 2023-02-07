@@ -1,4 +1,4 @@
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import CartItem from "./CartItem";
@@ -12,6 +12,10 @@ type ShopingCartProps = {
 export  function ShoppingCart({isOpen} : ShopingCartProps) {
 
     const { closeCart, cartItems} = useShoppingCart();
+
+    function goToPayment() {
+
+    }
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} keyboard={true} placement="end" width={450}>
@@ -34,6 +38,7 @@ export  function ShoppingCart({isOpen} : ShopingCartProps) {
                         }, 0)
                     )}
                 </div>
+            <Button variant='outline-primary' className="btn-pay" onClick={() => goToPayment()}>Go to payment</Button>
             </Stack>
         </Offcanvas.Body>
     </Offcanvas>

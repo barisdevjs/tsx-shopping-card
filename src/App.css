@@ -15,3 +15,10 @@
     align-items: center;
     column-gap: 1rem;
 }
+
+
+.btn-pay {
+    width:fit-content;
+    margin-left: auto;
+    display: block;
+}
