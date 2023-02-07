@@ -12,17 +12,17 @@ type ShoppingCartProviderProps = {
 }
 
 export type CartItemT = {
-    id: number 
+    id: number | string 
     quantity: number 
 }
 
 type ShoppingCartContext = {
     openCart: () => void
     closeCart: () => void
-    getItemQuantity: (id: number) => number
-    increaseItemQuantity: (id: number) => void
-    decreaseItemQuantity: (id: number) => void
-    removeFromCart: (id: number) => void
+    getItemQuantity: (id: number | string ) => number
+    increaseItemQuantity: (id: number | string ) => void
+    decreaseItemQuantity: (id: number | string ) => void
+    removeFromCart: (id: number | string ) => void
     getItem:(name: string) => StoreItemsProps
     cartQuantity : number
     cartItems: CartItemT[]
@@ -54,11 +54,11 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     }
 
 
-    function getItemQuantity(id: number) {
+    function getItemQuantity(id: number | string ) {
         return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
-    function increaseItemQuantity(id: number) {
+    function increaseItemQuantity(id: number | string ) {
          setCartItems(currentItems => {
             if (currentItems.find(item => item.id === id) == null) {
                 return [...currentItems, {id, quantity:1}]
@@ -74,7 +74,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
          })
     }
 
-    function decreaseItemQuantity(id: number) {
+    function decreaseItemQuantity(id: number | string ) {
         setCartItems(currentItems => {
            if (currentItems.find(item => item.id === id)?.quantity === 1) {
                return currentItems.filter(item => item.id !== id)
@@ -90,7 +90,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
    }
 
-   function removeFromCart(id: number) {
+   function removeFromCart(id: number | string ) {
         setCartItems(currentItems => {
             return currentItems.filter(item => item.id !== id)
         })

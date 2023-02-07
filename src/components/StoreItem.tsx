@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 export type StoreItemsProps = {
-    id: number
+    id: number | string 
     name: string
     price: number
     imgUrl: string

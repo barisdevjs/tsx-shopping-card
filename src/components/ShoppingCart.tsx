@@ -13,8 +13,18 @@ export  function ShoppingCart({isOpen} : ShopingCartProps) {
 
     const { closeCart, cartItems} = useShoppingCart();
 
-    function goToPayment() {
-
+    async function goToPayment() {
+        await fetch('http://localhost:4000/payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({items:cartItems})
+        }).then((res) => {
+            return res.json();
+        }).then((data) => {
+            if(data.url) window.location.assign(data.url);
+        })
     }
 
   return (
@@ -38,7 +48,7 @@ export  function ShoppingCart({isOpen} : ShopingCartProps) {
                         }, 0)
                     )}
                 </div>
-            <Button variant='outline-primary' className="btn-pay" onClick={() => goToPayment()}>Go to payment</Button>
+            <Button variant='outline-primary' className="btn-pay" onClick={goToPayment}>Go to payment</Button>
             </Stack>
         </Offcanvas.Body>
     </Offcanvas>
