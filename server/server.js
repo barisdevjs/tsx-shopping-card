@@ -1,14 +1,3 @@
-// secret key
-
-// sk_test_51MYc87Jgkc2AipgyOJm6CBDqCXR3Ogd1QD0zKYOJ0mQOM6m1FbkzZBo381zH5m7MQoi8TUlLmxHtyYriOapwF40l00h4b57IhZ
-
-
-// git price_1MYqm6Jgkc2Aipgy6sdDS0DM
-
-// computer price_1MYqnzJgkc2Aipgy3SH8aVTz
-
-// Javascript price_1MYqpEJgkc2Aipgys7dqjCyw
-
 const express = require('express');
 var cors = require('cors');
 const stripe = require('stripe')('sk_test_51MYc87Jgkc2AipgyOJm6CBDqCXR3Ogd1QD0zKYOJ0mQOM6m1FbkzZBo381zH5m7MQoi8TUlLmxHtyYriOapwF40l00h4b57IhZ');
@@ -22,7 +11,7 @@ app.use(express.json());
 app.post('/payment', async (req, res) => {
 
 
-    console.log(req.body)
+    // console.log(req.body)
     const items = req.body.items;
     let lineItems = [];
 
@@ -46,10 +35,22 @@ app.post('/payment', async (req, res) => {
 
 })
 
-// customerId
-const paymentIntent = await stripe.paymentIntents.retrieve(
-    'pm_1MYsCKJgkc2AipgyW4EtMkyz'
-  );
+
+app.get('/paymentIntents', async (req, res) => {
+    try {
+      const paymentIntents = await stripe.paymentIntents.list({
+        limit: 1
+      });
+  
+      res.json(paymentIntents);
+      console.log('server', paymentIntents)
+    } catch (error) {
+      console.error(error);
+      res.status(500).send({ error: error.message });
+    }
+  });
+
+
 
 
 app.listen(4000, () => console.log("Listening on port 4000!"));

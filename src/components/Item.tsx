@@ -9,7 +9,7 @@ function Item() {
   const { name } = useParams();
   const { getItem } = useShoppingCart();
   const element = getItem(name as string);
-  const navigate =useNavigate()
+  const navigate =useNavigate();
 
   return (
       <Card>
