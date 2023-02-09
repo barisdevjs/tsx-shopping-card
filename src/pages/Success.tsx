@@ -4,13 +4,14 @@ import { Button, Card, Col, Row, Stack } from 'react-bootstrap'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
-import { formatDate, formatFirstLetter } from '../utilities/formatCurrency';
+import { formatCurrency, formatDate, formatFirstLetter, hideSecret } from '../utilities/formatCurrency';
 
 interface IPaymentIntent {
   status: string;
   amount: number;
   created:number;
   payment_method_types:Array<string>;
+  id:string;
 };
 
 
@@ -18,7 +19,8 @@ const initialPaymentIntents: IPaymentIntent = {
   status: '',
   amount: 0,
   created: 0,
-  payment_method_types: ['']
+  payment_method_types: [''],
+  id:''
   };
 
 function Success() {
@@ -42,7 +44,7 @@ function Success() {
 
 
   return (
-    <Card className="m-auto w-50 mt-5">
+    <Card className="m-auto w-75 mt-5">
         <Card.Header>
             <Stack direction="horizontal" className="d-flex align-items-center justify-content-center gap-3">
             <FontAwesomeIcon icon={faCheckCircle} className='text-success' size='3x' />
@@ -63,7 +65,7 @@ function Success() {
             <>
         <Row className="px-3">
           <Col className="text-center">Amount</Col>
-          <Col className="text-center">{paymentIntents.amount} TRY</Col>
+          <Col className="text-center">{formatCurrency(paymentIntents.amount / 100)} TRY</Col>
         </Row>
         <Row className="px-3">
           <Col className="text-center">Date</Col>
@@ -76,6 +78,10 @@ function Success() {
         <Row className="px-3">
           <Col className="text-center">Status</Col>
           <Col className="text-center text-success">{formatFirstLetter(paymentIntents.status)}</Col>
+        </Row>
+        <Row className="px-3">
+          <Col className="text-center">Transaction_ID</Col>
+          <Col className="text-center ">{hideSecret(paymentIntents.id)}</Col>
         </Row>
         </>
           ) : null }

@@ -1,6 +1,6 @@
 const express = require('express');
 var cors = require('cors');
-const stripe = require('stripe')('sk_test_51MYc87Jgkc2AipgyOJm6CBDqCXR3Ogd1QD0zKYOJ0mQOM6m1FbkzZBo381zH5m7MQoi8TUlLmxHtyYriOapwF40l00h4b57IhZ');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY || '');
 
 const app = express();
 app.use(cors());
@@ -9,7 +9,6 @@ app.use(express.json());
 
 
 app.post('/payment', async (req, res) => {
-
 
     // console.log(req.body)
     const items = req.body.items;
