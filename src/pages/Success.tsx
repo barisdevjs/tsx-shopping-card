@@ -5,6 +5,7 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import { formatCurrency, formatDate, formatFirstLetter, hideSecret } from '../utilities/formatCurrency';
+import { useShoppingCart } from '../context/ShoppingCartContext';
 
 interface IPaymentIntent {
   status: string;
@@ -25,6 +26,7 @@ const initialPaymentIntents: IPaymentIntent = {
 
 function Success() {
 
+  const { resetCart } = useShoppingCart();
   const [paymentIntents, setPaymentIntents] = useState<IPaymentIntent >(initialPaymentIntents);
   const [flag,setFlag] = useState<boolean>(false);
   const navigate = useNavigate();
@@ -36,6 +38,7 @@ function Success() {
       const data = await response.json();
       setPaymentIntents(data?.data?.[0]);
       setFlag(true);
+      resetCart();
     } catch (error) {
       console.error(error);
     }

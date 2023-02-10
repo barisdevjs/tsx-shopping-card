@@ -26,6 +26,7 @@ type ShoppingCartContext = {
     getItem:(name: string) => StoreItemsProps
     cartQuantity : number
     cartItems: CartItemT[]
+    resetCart : () => CartItemT[]
 }
 
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
@@ -96,6 +97,11 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         })
    }
 
+   function resetCart() : CartItemT[] {
+     setCartItems([])
+     return [];
+   }
+
 
     return (
         <ShoppingCartContext.Provider 
@@ -108,7 +114,8 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             closeCart,
             cartItems,
             cartQuantity,
-            getItem
+            getItem,
+            resetCart
             }}>
             {children}
             <ShoppingCart isOpen={isOpen} />
