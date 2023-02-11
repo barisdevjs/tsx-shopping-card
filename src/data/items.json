@@ -3,7 +3,7 @@
     "id": "price_1MYqm6Jgkc2Aipgy6sdDS0DM",
     "name": "Git",
     "price": 70,
-    "imgUrl": "src/images/computer.jpg",
+    "imgUrl": "src/images/git.png",
     "description": "Git  is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).Git was originally authored by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.[12] Since 2005, Junio Hamano has been the core maintainer. As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking abilities, independent of network access or a central server.[13] Git is free and open-source software distributed under the GPL-2.0-only license."
   },
   {
@@ -17,7 +17,7 @@
     "id": "price_1MYqpEJgkc2Aipgys7dqjCyw",
     "name": "Javascript",
     "price": 119.99,
-    "imgUrl": "src/images/Javascript.png",
+    "imgUrl": "src/images/javascript.png",
     "description": "JavaScript is a programming language that is commonly used to add interactivity and other dynamic features to websites. It is a client-side scripting language, which means that the code is executed directly by the web browser, rather than by a server. JavaScript is also used in a variety of other platforms and environments, such as servers (with technologies like Node.js), desktop and mobile apps (with technologies like Electron and React Native), and Internet of Things devices."
   },
   {
@@ -52,7 +52,7 @@
     "id": "price_1MYup3Jgkc2AipgyJgkGl74l",
     "name": "Typescript",
     "price": 250,
-    "imgUrl": "src/images/typeScript.png",
+    "imgUrl": "src/images/typescript.png",
     "description":"TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript. As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.TypeScript may be used to develop JavaScript applications for both client-side and server-side execution (as with Node.js or Deno). Multiple options are available for transpilation. The default TypeScript Compiler can be used, or the Babel compiler can be invoked to convert TypeScript to JavaScript."
   }
 ]
