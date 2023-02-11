@@ -3,56 +3,56 @@
     "id": "price_1MYqm6Jgkc2Aipgy6sdDS0DM",
     "name": "Git",
     "price": 70,
-    "imgUrl": "/images/git.png",
+    "imgUrl": "src/images/computer.jpg",
     "description": "Git  is a distributed version control system that tracks changes in any set of computer files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows (thousands of parallel branches running on different systems).Git was originally authored by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development.[12] Since 2005, Junio Hamano has been the core maintainer. As with most other distributed version control systems, and unlike most client–server systems, every Git directory on every computer is a full-fledged repository with complete history and full version-tracking abilities, independent of network access or a central server.[13] Git is free and open-source software distributed under the GPL-2.0-only license."
   },
   {
     "id": "price_1MYqnzJgkc2Aipgy3SH8aVTz",
     "name": "Computer",
     "price": 11000,
-    "imgUrl": "/images/computer.jpg",
+    "imgUrl": "src/images/computer.jpg",
     "description": "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. Modern digital electronic computers can perform generic sets of operations known as programs. These programs enable computers to perform a wide range of tasks. A computer system is a nominally complete computer that includes the hardware, operating system (main software), and peripheral equipment needed and used for full operation. This term may also refer to a group of computers that are linked and function together, such as a computer network or computer cluster."
   },
   {
     "id": "price_1MYqpEJgkc2Aipgys7dqjCyw",
     "name": "Javascript",
     "price": 119.99,
-    "imgUrl": "/images/Javascript.png",
+    "imgUrl": "src/images/Javascript.png",
     "description": "JavaScript is a programming language that is commonly used to add interactivity and other dynamic features to websites. It is a client-side scripting language, which means that the code is executed directly by the web browser, rather than by a server. JavaScript is also used in a variety of other platforms and environments, such as servers (with technologies like Node.js), desktop and mobile apps (with technologies like Electron and React Native), and Internet of Things devices."
   },
   {
     "id": "price_1MYulVJgkc2AipgyNHfsk81g",
     "name": "MongoDb",
     "price": 100,
-    "imgUrl": "/images/mongodb.png",
+    "imgUrl": "src/images/mongodb.png",
     "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License (SSPL) which is deemed non-free by several distributions."
   },
   {
     "id": "price_1MYumWJgkc2AipgyvS3QB6SN",
     "name": "NodeJs",
     "price": 140,
-    "imgUrl": "/images/nodejs.png",
+    "imgUrl": "src/images/nodejs.png",
     "description": "Node.js is similar in design to, and influenced by, systems like Ruby's Event Machine and Python's Twisted. Node.js takes the event model a bit further. It presents an event loop as a runtime construct instead of as a library. In other systems, there is always a blocking call to start the event-loop. Typically, behavior is defined through callbacks at the beginning of a script, and at the end a server is started through a blocking call like EventMachine::run(). In Node.js, there is no such start-the-event-loop call. Node.js simply enters the event loop after executing the input script. Node.js exits the event loop when there are no more callbacks to perform. This behavior is like browser JavaScript — the event loop is hidden from the user."
   },
   {
     "id": "price_1MYun8Jgkc2AipgydLuK5dQU",
     "name": "Python",
     "price": 210.00,
-    "imgUrl": "/images/python.jpg",
+    "imgUrl": "src/images/python.jpg",
     "description": "Python is an object-oriented, interpreted, modular, and interactive high-level programming language. It's simple indentation-based syntax makes it easy to learn and remember, allowing for programming to begin without getting bogged down in syntax details. Its modular structure supports class hierarchies and input of all types of data fields. It can run on almost any platform (Unix, Linux, Mac, Windows, Amiga, Symbian). With Python, you can develop software for system programming, user interface programming, network programming, web programming, application and database software programming."
   },
   {
     "id": "price_1MYunjJgkc2Aipgy6DV2Fees",
     "name": "Redux",
     "price": 50,
-    "imgUrl": "/images/redux.png",
+    "imgUrl": "src/images/redux.png",
     "description":"Redux is a predictable state container for JavaScript apps.It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available."
   },
   {
     "id": "price_1MYup3Jgkc2AipgyJgkGl74l",
     "name": "Typescript",
     "price": 250,
-    "imgUrl": "/images/typeScript.png",
+    "imgUrl": "src/images/typeScript.png",
     "description":"TypeScript is a free and open source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript. As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.TypeScript may be used to develop JavaScript applications for both client-side and server-side execution (as with Node.js or Deno). Multiple options are available for transpilation. The default TypeScript Compiler can be used, or the Babel compiler can be invoked to convert TypeScript to JavaScript."
   }
 ]
