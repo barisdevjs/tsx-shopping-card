@@ -1,113 +1,126 @@
-.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
-    color: var(--bs-red) !important;
-    transition: .1s ease-out all;
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+  color: var(--bs-red) !important;
+  transition: .1s ease-out all;
 }
 
 .offcanvas.offcanvas-end.show {
-    width: 500px;
+  width: 500px;
 }
 
 .btn-out {
-    display:flex !important;
-    justify-content: space-around;
-    align-items: center;
-    column-gap: 1rem;
+  display: flex !important;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 1rem;
 }
 
 
 .btn-pay {
-    width:fit-content;
-    margin-left: auto;
-    display: block;
+  width: fit-content;
+  margin-left: auto;
+  display: block;
 }
 
 .pre {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: wrap;
-    justify-items: start;
-    background-color:black;
-    color: white;
-    border-radius: 5px;
-    word-spacing: .5rem;
-    padding: 2rem;
-    font-size: 1.25rem !important;
-    word-break: break-word !important;
-    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(128, 128, 128, 0.1) 20px 20px, rgba(128, 128, 128, 0.05) 25px 25px;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap;
+  justify-items: start;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  word-spacing: .5rem;
+  padding: 2rem;
+  font-size: 1.25rem !important;
+  word-break: break-word !important;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(128, 128, 128, 0.1) 20px 20px, rgba(128, 128, 128, 0.05) 25px 25px;
 }
 
 
 @media (max-width: 767px) {
-    pre {
-        font-size: 1rem;
-        padding: 1rem;
-    }
+  pre {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
-.i-default  {
-    color: orangered;
-    font-family: monospace;
-    font-size: larger;
+.i-default {
+  color: orangered;
+  font-family: monospace;
+  font-size: larger;
 }
 
 .i-success {
-    color: greenyellow ;
-    font-family: monospace;
-    font-size: larger;
+  color: greenyellow;
+  font-family: monospace;
+  font-size: larger;
 }
 
 
 .typewriter {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-  }
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
 
 
- .pre  p:nth-child(1) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 0s;
-  }
-  
- .pre  p:nth-child(2) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 2s;
-  }
-  
- .pre  p:nth-child(3) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 4s;
-  }
-  
- .pre  p:nth-child(4) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 6s;
-  }
-  
- .pre  p:nth-child(5) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 8s;
-  }
-  
- .pre  p:nth-child(6) {
-    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
-    animation-delay: 10s;
-  }
-  
-  @keyframes typing {
-    from { opacity: 0%; }
-    to { opacity: 100%; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }
-  
+.pre p:nth-child(1) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 0s;
+}
 
-  .cancel {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-    gap:2rem;
-    height:auto;
+.pre p:nth-child(2) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 2s;
+}
+
+.pre p:nth-child(3) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 4s;
+}
+
+.pre p:nth-child(4) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 6s;
+}
+
+.pre p:nth-child(5) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 8s;
+}
+
+.pre p:nth-child(6) {
+  animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  animation-delay: 10s;
+}
+
+@keyframes typing {
+  from {
+    opacity: 0%;
   }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+
+.cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: auto;
+}

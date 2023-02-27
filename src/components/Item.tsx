@@ -9,24 +9,24 @@ function Item() {
   const { name } = useParams();
   const { getItem } = useShoppingCart();
   const element = getItem(name as string);
-  const navigate =useNavigate();
+  const navigate = useNavigate();
 
   return (
-      <Card>
-        <Card.Img variant="top" src={element.imgUrl} style={{ maxHeight: '49vh', objectFit:'cover' }}/>
-        <Card.Body>
-          <Card.Title className="d-flex justify-content-between mb-0">
-            <p>{element.name}</p>
-            <Button variant="outline-danger" className="btn-out" onClick={() => navigate('/store')} >
-              <BsFillArrowLeftSquareFill />Back to Store</Button>
-          </Card.Title>
-          <Card.Subtitle className='text-muted mb-2'>ID : {element.id}</Card.Subtitle>
-          <Card.Subtitle className='text-muted mb-2'>Price : {element.price}</Card.Subtitle>
-          <Card.Text>
-            {element.description}
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <Card>
+      <Card.Img variant="top" src={element.imgUrl} style={{ maxHeight: '49vh', objectFit: 'cover' }} />
+      <Card.Body>
+        <Card.Title className="d-flex justify-content-between align-items-center mb-2">
+          <div>{element.name}</div>
+          <Button variant="outline-danger" className="btn-out" onClick={() => navigate('/store')} >
+            <BsFillArrowLeftSquareFill />Back to Store</Button>
+        </Card.Title>
+        <Card.Subtitle className='text-muted mb-2'>ID : {element.id}</Card.Subtitle>
+        <Card.Subtitle className='text-muted mb-2'>Price : {element.price}</Card.Subtitle>
+        <Card.Text>
+          {element.description}
+        </Card.Text>
+      </Card.Body>
+    </Card>
   )
 }
 

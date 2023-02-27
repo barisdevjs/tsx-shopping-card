@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 
 
 export type StoreItemsProps = {
-    id: number | string 
+    id: number | string
     name: string
     price: number
     imgUrl: string
-    description?:string 
+    description?: string
 }
 
 export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) {
- 
+
     const {
         getItemQuantity,
         increaseItemQuantity,
@@ -26,12 +26,12 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
     return (
         <Card className='h-100' >
             <Link to={`/store/${name}`}   >
-            <Card.Img
-                variant='top'
-                src={imgUrl}
-                height='200px'
-                style={{ objectFit: 'cover' }}
-            />
+                <Card.Img
+                    variant='top'
+                    src={imgUrl}
+                    height='200px'
+                    style={{ objectFit: 'cover' }}
+                />
             </Link>
             <Card.Body className='d-flex flex-column'>
                 <Card.Title className='d-flex justify-content-between align-items-baseline mb-4'>
@@ -55,9 +55,9 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
                                 </div>
                                 <Button variant='outline-secondary' onClick={() => increaseItemQuantity(id)}>+</Button>
                             </div>
-                            <Button 
-                            onClick={() => removeFromCart(id)}
-                            variant='danger' size='sm'>
+                            <Button
+                                onClick={() => removeFromCart(id)}
+                                variant='danger' size='sm'>
                                 Remove
                             </Button >
                         </div>
@@ -65,5 +65,5 @@ export default function StoreItem({ id, name, price, imgUrl }: StoreItemsProps) 
                 </div>
             </Card.Body>
         </Card>
-    ) 
+    )
 }

@@ -13,23 +13,21 @@ import Cancel from './pages/Cancel';
 function App() {
 
   return (
-    <>
     <ShoppingCartProvider>
-    <Navbar/>
-    <Container className="mb-4">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Home />} />
-        <Route path="/store">
-          <Route index element={<Store />}/>
-          <Route path=":name" element={<Item />}/>
+      <Navbar />
+      <Container className="mb-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
+          <Route path="/store">
+            <Route index element={<Store />} />
+            <Route path=":name" element={<Item />} />
           </Route>
-        <Route path="/success" element={<Success />} />
-        <Route path="/cancel" element={<Cancel />} />
-      </Routes>
-    </Container>
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
+        </Routes>
+      </Container>
     </ShoppingCartProvider>
-    </>
   )
 }
 
