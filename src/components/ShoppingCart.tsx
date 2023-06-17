@@ -14,7 +14,7 @@ export  function ShoppingCart({isOpen} : ShopingCartProps) {
     const { closeCart, cartItems} = useShoppingCart();
 
     async function goToPayment() {
-        await fetch('http://localhost:4000/payment', {
+        await fetch('https://shopping-server-v8yl.onrender.com/payment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

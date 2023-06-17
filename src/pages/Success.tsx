@@ -34,7 +34,7 @@ function Success() {
 
   const handleClick = async () => {
     try {
-      const response = await fetch('http://localhost:4000/paymentIntents');
+      const response = await fetch('https://shopping-server-v8yl.onrender.com/paymentIntents');
       const data = await response.json();
       setPaymentIntents(data?.data?.[0]);
       setFlag(true);
