@@ -7,6 +7,7 @@ import { ShoppingCartProvider } from './context/ShoppingCartContext';
 import Item from './components/Item';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
+import AllPayments from './pages/AllPayments';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           </Route>
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
+          <Route path="/getAllPaymentsList" element={<AllPayments />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>

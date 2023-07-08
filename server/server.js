@@ -11,7 +11,6 @@ app.use(express.json());
 
 app.post('/payment', async (req, res) => {
 
-  // console.log(req.body)
   const items = req.body.items;
   let lineItems = [];
 
@@ -43,12 +42,26 @@ app.get('/paymentIntents', async (req, res) => {
     });
 
     res.json(paymentIntents);
-    console.log('server', paymentIntents)
+    // console.log('server', paymentIntents)
   } catch (error) {
     console.error(error);
     res.status(500).send({ error: error.message });
   }
 });
 
+app.get('/paymentIntentsAll', async (req, res) => {
+  try {
+    const paymentIntentsAll = await stripe.paymentIntents.list({
+      limit: 5
+    });
+
+
+    res.json(paymentIntentsAll);
+    console.log('server', paymentIntentsAll)
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ error: error.message });
+  }
+});
 
 app.listen(4000, () => console.log("Listening on port 4000!"));

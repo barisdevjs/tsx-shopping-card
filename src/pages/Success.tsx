@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { formatCurrency, formatDate, formatFirstLetter, hideSecret } from '../utilities/formatCurrency';
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
-interface IPaymentIntent {
+export interface IPaymentIntent {
   status: string;
   amount: number;
   created:number;

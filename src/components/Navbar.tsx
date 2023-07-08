@@ -17,6 +17,7 @@ export default function Navbar() {
                 <Nav className='me-auto' >
                     <Nav.Link to="/" as={NavLink} >Home</Nav.Link>
                     <Nav.Link to="/store" as={NavLink}>Store</Nav.Link>
+                    <Nav.Link to="/getAllPaymentsList" as={NavLink}>Past payments</Nav.Link>
                 </Nav>
                 { cartQuantity > 0 && (
                 <Button 
