@@ -50,14 +50,16 @@ app.get('/paymentIntents', async (req, res) => {
 });
 
 app.get('/paymentIntentsAll', async (req, res) => {
+  const limit = req.query.limit;
+
   try {
     const paymentIntentsAll = await stripe.paymentIntents.list({
-      limit: 5
+      limit: limit || 5
     });
 
 
     res.json(paymentIntentsAll);
-    console.log('server', paymentIntentsAll)
+    // console.log('server', paymentIntentsAll)
   } catch (error) {
     console.error(error);
     res.status(500).send({ error: error.message });

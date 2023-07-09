@@ -24,3 +24,8 @@ export function formatDate(timeNumber: number): string {
 export function hideSecret(secret: string): string {
     return secret.slice(0, -6).padEnd(secret.length, "*");
 }
+
+export function hideSecretStart(secret: string): string {
+    const first6digits = secret.slice(20)
+    return first6digits.padStart(secret.length, "*");
+}
