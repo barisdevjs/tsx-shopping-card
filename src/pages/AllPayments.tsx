@@ -51,7 +51,7 @@ function AllPayments() {
         </tr>
       </thead>
       <tbody>
-        {!loading ? (
+        {loading ? (
           <tr>
             <td><Spinner animation="border" role="status" variant="primary"/></td>
             <td><Spinner animation="border" role="status" variant="secondary"/></td>
